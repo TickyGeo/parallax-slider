@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    height: 100vh;
+    position: relative;
+    background: url(images/first.jpg) no-repeat center / cover;
+    display: flex;
+}
+
+.slider .item {
+    width: calc(100% / 40);
+    height: 100%;
+    background: url(images/second.jpg) no-repeat center / 100% fixed;
+    transition: 1s 1s;
+}
+
+.slider .item:hover {
+    background-size: 150%;
+    opacity: 0;
+    transition: none;
+}
+
+.slider .btn {
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background: #fff5;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.slider .btn:hover {
+    background: #fff9;
+}
+
+.slider .btn.prev {
+    left: 0;
+}
+
+.slider .btn.next {
+    right: 0;
+}
